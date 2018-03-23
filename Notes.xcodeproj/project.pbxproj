@@ -13,6 +13,8 @@
 		E712DF2D20655E7F0099ABE1 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E712DF2B20655E7F0099ABE1 /* Notes.xcdatamodeld */; };
 		E712DF2F20655E7F0099ABE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E712DF2E20655E7F0099ABE1 /* Assets.xcassets */; };
 		E712DF3220655E7F0099ABE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E712DF3020655E7F0099ABE1 /* LaunchScreen.storyboard */; };
+		E712DF3A206569420099ABE1 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712DF39206569420099ABE1 /* AddNoteViewController.swift */; };
+		E712DF3C206569A60099ABE1 /* ViewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712DF3B206569A60099ABE1 /* ViewNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E712DF2E20655E7F0099ABE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E712DF3120655E7F0099ABE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E712DF3320655E7F0099ABE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E712DF39206569420099ABE1 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		E712DF3B206569A60099ABE1 /* ViewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				E712DF3020655E7F0099ABE1 /* LaunchScreen.storyboard */,
 				E712DF3320655E7F0099ABE1 /* Info.plist */,
 				E712DF2B20655E7F0099ABE1 /* Notes.xcdatamodeld */,
+				E712DF39206569420099ABE1 /* AddNoteViewController.swift */,
+				E712DF3B206569A60099ABE1 /* ViewNoteViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E712DF3C206569A60099ABE1 /* ViewNoteViewController.swift in Sources */,
+				E712DF3A206569420099ABE1 /* AddNoteViewController.swift in Sources */,
 				E712DF2720655E7F0099ABE1 /* ViewController.swift in Sources */,
 				E712DF2D20655E7F0099ABE1 /* Notes.xcdatamodeld in Sources */,
 				E712DF2520655E7F0099ABE1 /* AppDelegate.swift in Sources */,
