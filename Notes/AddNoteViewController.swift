@@ -8,11 +8,14 @@
 
 import UIKit
 import CoreData
-class AddNoteViewController: UIViewController {
+class AddNoteViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var textViewNote: UITextView!
     let context = AppDelegate().persistentContainer.viewContext
     
+    @IBOutlet weak var btnSave: UIBarButtonItem!
     @IBAction func btnSaveTapped(_ sender: UIBarButtonItem) {
+        print("in load")
+        
         
         let entity = NSEntityDescription.insertNewObject(forEntityName: "Notes", into: context) as! Notes
         
@@ -24,9 +27,24 @@ class AddNoteViewController: UIViewController {
         
     }
     
+    @objc func enablebtn(){
+        print("change")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.textViewNote.delegate = self
+        
+//        textViewNote.isUserInteractionEnabled = true
+//        var gesture = UITapGestureRecognizer(target: self, action: #selector(enablebtn))
+//        textViewNote.addGestureRecognizer(gesture)
         // Do any additional setup after loading the view.
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        btnSave.isEnabled = !textViewNote.text.isEmpty
     }
 
     override func didReceiveMemoryWarning() {

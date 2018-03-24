@@ -27,11 +27,9 @@ class ViewNoteViewController: UIViewController {
     @objc func btnSaveTapped (){
         textFieldViewNote.isEditable = false
         noteTextObj.noteText = textFieldViewNote.text
-        print(noteTextObj.noteText)
         try! context.save()
         navigationItem.rightBarButtonItem = btnEdit
         
-
     }
     
     

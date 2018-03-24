@@ -89,13 +89,14 @@
                         <viewLayoutGuide key="safeArea" id="iff-3q-dfs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="rcX-Er-TV1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mGC-BS-KdE">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="mGC-BS-KdE">
                             <connections>
                                 <action selector="btnSaveTapped:" destination="C2j-Zw-7dr" id="61H-kn-mtZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnSave" destination="mGC-BS-KdE" id="hHe-3e-XHM"/>
                         <outlet property="textViewNote" destination="ZcB-bB-he3" id="ONd-ia-7Gx"/>
                     </connections>
                 </viewController>
