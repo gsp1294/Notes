@@ -18,6 +18,8 @@ class ViewNoteViewController: UIViewController {
     var btnSave : UIBarButtonItem!
     
     @objc func btnEditTapped (){
+        btnSave = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(btnSaveTapped));
+
         textFieldViewNote.isEditable = true
         navigationItem.rightBarButtonItem = btnSave
         
@@ -25,6 +27,7 @@ class ViewNoteViewController: UIViewController {
     
     
     @objc func btnSaveTapped (){
+        btnEdit = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(btnEditTapped));
         textFieldViewNote.isEditable = false
         noteTextObj.noteText = textFieldViewNote.text
         try! context.save()
