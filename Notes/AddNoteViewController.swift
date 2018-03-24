@@ -7,12 +7,25 @@
 //
 
 import UIKit
-
+import CoreData
 class AddNoteViewController: UIViewController {
-
+    @IBOutlet weak var textViewNote: UITextView!
+    let context = AppDelegate().persistentContainer.viewContext
+    
+    @IBAction func btnSaveTapped(_ sender: UIBarButtonItem) {
+        
+        let entity = NSEntityDescription.insertNewObject(forEntityName: "Notes", into: context) as! Notes
+        
+        entity.noteText = textViewNote.text
+        
+        try! context.save()
+        navigationController?.popViewController(animated: true)
+     
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

@@ -34,6 +34,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JtJ-dI-TXQ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DiP-fa-mGM"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,10 +52,13 @@
                     <navigationItem key="navigationItem" title="Notes" id="Ka1-Am-TSz">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="MAW-xZ-nSI">
                             <connections>
-                                <segue destination="C2j-Zw-7dr" kind="show" id="hak-4b-kW5"/>
+                                <segue destination="C2j-Zw-7dr" kind="show" identifier="addNote" id="hak-4b-kW5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableViewNotes" destination="2c8-A3-kBn" id="8bp-1B-N4D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +77,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,8 +89,15 @@
                         <viewLayoutGuide key="safeArea" id="iff-3q-dfs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="rcX-Er-TV1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mGC-BS-KdE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mGC-BS-KdE">
+                            <connections>
+                                <action selector="btnSaveTapped:" destination="C2j-Zw-7dr" id="61H-kn-mtZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textViewNote" destination="ZcB-bB-he3" id="ONd-ia-7Gx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BfW-mG-etG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
