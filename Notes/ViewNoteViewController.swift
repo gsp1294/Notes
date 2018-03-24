@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-class ViewNoteViewController: UIViewController {
+class ViewNoteViewController: UIViewController, UITextViewDelegate {
     var noteTextObj : Notes!
     var context = AppDelegate().persistentContainer.viewContext
     @IBOutlet weak var textFieldViewNote: UITextView!
@@ -40,7 +40,9 @@ class ViewNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textFieldViewNote.text = noteTextObj.noteText
+        textFieldViewNote.delegate = self
         btnSave = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(btnSaveTapped))
+        btnSave.isEnabled = false
         btnEdit = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(btnEditTapped))
         navigationItem.rightBarButtonItem = btnEdit
         // Do any additional setup after loading the view.
@@ -52,6 +54,9 @@ class ViewNoteViewController: UIViewController {
     }
     
 
+    func textViewDidChange(_ textView: UITextView) {
+        btnSave.isEnabled = !textFieldViewNote.text.isEmpty
+    }
     /*
     // MARK: - Navigation
 

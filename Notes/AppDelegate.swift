@@ -18,10 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         UINavigationBar.appearance().barTintColor = UIColor.flatWatermelon()
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.init(contrastingBlackOrWhiteColorOn: UIColor.flatWatermelon(), isFlat: true)]
        UINavigationBar.appearance().tintColor = UIColor.init(contrastingBlackOrWhiteColorOn: UIColor.flatWatermelon(), isFlat: true)
         UITextView.appearance().backgroundColor = UIColor.flatWhite()
         UITableView.appearance().backgroundColor = UIColor.flatWhite()
         UITableViewCell.appearance().backgroundColor = UIColor.flatWhite()
+        
         // Override point for customization after application launch.
         return true
     }
