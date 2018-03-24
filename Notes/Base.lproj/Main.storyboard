@@ -30,7 +30,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ONj-Tb-tPs" kind="show" id="Xfo-aa-dtS"/>
+                                            <segue destination="ONj-Tb-tPs" kind="show" identifier="viewNote" id="Xfo-aa-dtS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -111,29 +111,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJo-jr-1zx">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RxW-Ew-nFA">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hlH-6Q-hSe" firstAttribute="trailing" secondItem="mJo-jr-1zx" secondAttribute="trailing" id="CsF-pJ-hAS"/>
-                            <constraint firstItem="mJo-jr-1zx" firstAttribute="leading" secondItem="hlH-6Q-hSe" secondAttribute="leading" id="VDJ-CG-sdl"/>
-                            <constraint firstItem="mJo-jr-1zx" firstAttribute="top" secondItem="hlH-6Q-hSe" secondAttribute="top" id="iCW-xM-8dZ"/>
-                            <constraint firstItem="hlH-6Q-hSe" firstAttribute="bottom" secondItem="mJo-jr-1zx" secondAttribute="bottom" id="mri-Hi-DKY"/>
+                            <constraint firstItem="RxW-Ew-nFA" firstAttribute="bottom" secondItem="hlH-6Q-hSe" secondAttribute="bottom" id="ACb-w0-oHW"/>
+                            <constraint firstItem="RxW-Ew-nFA" firstAttribute="leading" secondItem="hlH-6Q-hSe" secondAttribute="leading" id="VqA-Rs-bVG"/>
+                            <constraint firstItem="RxW-Ew-nFA" firstAttribute="top" secondItem="hlH-6Q-hSe" secondAttribute="top" id="dyS-pD-McL"/>
+                            <constraint firstItem="RxW-Ew-nFA" firstAttribute="trailing" secondItem="hlH-6Q-hSe" secondAttribute="trailing" id="qJ5-O2-m2E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hlH-6Q-hSe"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="zcf-19-Xmp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="OIY-ZC-IWN"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="zcf-19-Xmp"/>
+                    <connections>
+                        <outlet property="textFieldViewNote" destination="RxW-Ew-nFA" id="iOq-O6-dJ0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FO7-qO-vbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1619" y="767"/>
+            <point key="canvasLocation" x="1618.4000000000001" y="766.86656671664173"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zgu-KG-gv8">

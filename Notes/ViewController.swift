@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var listNotes = [Notes]()
     let context = AppDelegate().persistentContainer.viewContext
+    var noteTextHolder = Notes()
     @IBOutlet weak var tableViewNotes: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            var obj = listNotes[indexPath.row]
+            let obj = listNotes[indexPath.row]
             context.delete(obj)
             try! context.save()
             listNotes.remove(at: indexPath.row)
@@ -62,6 +63,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         }
+        if segue.identifier == "viewNote"{
+            let viewVC = segue.destination as! ViewNoteViewController
+            viewVC.noteTextObj = noteTextHolder
+        }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        noteTextHolder = listNotes[indexPath.row]
+        performSegue(withIdentifier: "viewNote", sender: self)
+    }
+    
+    
+
 }
 
