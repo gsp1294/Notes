@@ -61,7 +61,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addNote"{
-        let addVC = segue.destination as! AddNoteViewController
+        let _ = segue.destination as! AddNoteViewController
         
         
         }
