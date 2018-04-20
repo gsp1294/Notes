@@ -16,6 +16,7 @@
 		E712DF3220655E7F0099ABE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E712DF3020655E7F0099ABE1 /* LaunchScreen.storyboard */; };
 		E712DF3A206569420099ABE1 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712DF39206569420099ABE1 /* AddNoteViewController.swift */; };
 		E712DF3C206569A60099ABE1 /* ViewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712DF3B206569A60099ABE1 /* ViewNoteViewController.swift */; };
+		E7C586362089A3D60034DC46 /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C586352089A3D60034DC46 /* Extension + String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E712DF3320655E7F0099ABE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E712DF39206569420099ABE1 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		E712DF3B206569A60099ABE1 /* ViewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNoteViewController.swift; sourceTree = "<group>"; };
+		E7C586352089A3D60034DC46 /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				E712DF2B20655E7F0099ABE1 /* Notes.xcdatamodeld */,
 				E712DF39206569420099ABE1 /* AddNoteViewController.swift */,
 				E712DF3B206569A60099ABE1 /* ViewNoteViewController.swift */,
+				E7C586352089A3D60034DC46 /* Extension + String.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			files = (
 				E712DF3C206569A60099ABE1 /* ViewNoteViewController.swift in Sources */,
 				E712DF3A206569420099ABE1 /* AddNoteViewController.swift in Sources */,
+				E7C586362089A3D60034DC46 /* Extension + String.swift in Sources */,
 				E712DF2720655E7F0099ABE1 /* ViewController.swift in Sources */,
 				E712DF2D20655E7F0099ABE1 /* Notes.xcdatamodeld in Sources */,
 				E712DF2520655E7F0099ABE1 /* AppDelegate.swift in Sources */,

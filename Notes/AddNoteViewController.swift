@@ -44,7 +44,7 @@ class AddNoteViewController: UIViewController, UITextViewDelegate {
     }
     
     func textViewDidChange(_ textView: UITextView) {
-        btnSave.isEnabled = !textViewNote.text.isEmpty
+        btnSave.isEnabled = !textViewNote.text.checkIfEmpty()
     }
 
     override func didReceiveMemoryWarning() {
